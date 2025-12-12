@@ -22,6 +22,79 @@ func outputWithZodiacSign(p Person) {
 
 	// TODO: Assign proper value to zodiacSign using if/else branching.
 	// NOTE: The runes are defined above as constants.
+	if p.BirthDate.Month == 4 {
+		if p.BirthDate.Day >= 21 {
+			zodiacSign = Taurus
+		} else {
+			zodiacSign = Aries
+		}
+	} else if p.BirthDate.Month == 5 {
+		if p.BirthDate.Day >= 22 {
+			zodiacSign = Gemini
+		} else {
+			zodiacSign = Taurus
+		}
+	} else if p.BirthDate.Month == 6 {
+		if p.BirthDate.Day >= 22 {
+			zodiacSign = Cancer
+		} else {
+			zodiacSign = Gemini
+		}
+	} else if p.BirthDate.Month == 7 {
+		if p.BirthDate.Day >= 23 {
+			zodiacSign = Leo
+		} else {
+			zodiacSign = Cancer
+		}
+	} else if p.BirthDate.Month == 8 {
+		if p.BirthDate.Day >= 23 {
+			zodiacSign = Virgo
+		} else {
+			zodiacSign = Leo
+		}
+	} else if p.BirthDate.Month == 9 {
+		if p.BirthDate.Day >= 23 {
+			zodiacSign = Libra
+		} else {
+			zodiacSign = Virgo
+		}
+	} else if p.BirthDate.Month == 10 {
+		if p.BirthDate.Day >= 23 {
+			zodiacSign = Scorpius
+		} else {
+			zodiacSign = Libra
+		}
+	} else if p.BirthDate.Month == 11 {
+		if p.BirthDate.Day >= 23 {
+			zodiacSign = Sagittarius
+		} else {
+			zodiacSign = Scorpius
+		}
+	} else if p.BirthDate.Month == 12 {
+		if p.BirthDate.Day >= 21 {
+			zodiacSign = Capricornus
+		} else {
+			zodiacSign = Sagittarius
+		}
+	} else if p.BirthDate.Month == 1 {
+		if p.BirthDate.Day >= 20 {
+			zodiacSign = Aquarius
+		} else {
+			zodiacSign = Capricornus
+		}
+	} else if p.BirthDate.Month == 2 {
+		if p.BirthDate.Day >= 19 {
+			zodiacSign = Pisces
+		} else {
+			zodiacSign = Aquarius
+		}
+	} else if p.BirthDate.Month == 3 {
+		if p.BirthDate.Day >= 21 {
+			zodiacSign = Aries
+		} else {
+			zodiacSign = Pisces
+		}
+	}
 
 	fmt.Printf("%s %s, born on %02d.%02d.%04d, has the zodiac sign %c.\n",
 		p.FirstName, p.LastName, p.Day, p.Month, p.Year, zodiacSign)
